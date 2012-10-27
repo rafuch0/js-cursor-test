@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+var cursors = [];
+cursors[0] = 'default';
+cursors[1] = 'pointer';
+cursors[2] = 'crosshair';
+cursors[3] = 'text';
+cursors[4] = 'wait';
+cursors[5] = 'help';
+cursors[6] = 'move';
+cursors[7] = 'e-resize';
+cursors[8] = 'ne-resize';
+cursors[9] = 'n-resize';
+cursors[10] = 'nw-resize';
+cursors[11] = 'w-resize';
+cursors[12] = 'sw-resize';
+cursors[13] = 's-resize';
+cursors[14] = 'se-resize';
+
+function setCursor(style)
+{
+	document.getElementsByTagName('html')[0]['style'].cursor = cursors[style];
+	document.getElementsByTagName('body')[0]['style'].cursor = cursors[style];
+}
+
+var currentCursor = 7;
+function cycleCursor(forward)
+{
+	setCursor(currentCursor);
+	if(forward)	currentCursor = currentCursor + 1;
+		else currentCursor = currentCursor - 1;
+	if(currentCursor > 14) currentCursor = 7;
+	if(currentCursor < 7) currentCursor = 14;
+}
+
+setInterval(cycleCursor, 100, false);
+
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
